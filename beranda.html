@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - Facebook Like</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+        .header {
+            background-color: #1877f2;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .header .search {
+            flex: 1;
+            margin: 0 20px;
+        }
+        .header .search input {
+            width: 100%;
+            padding: 8px;
+            border: none;
+            border-radius: 20px;
+        }
+        .header .nav {
+            display: flex;
+            gap: 15px;
+        }
+        .header .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .header .nav a:hover {
+            background-color: #166fe5;
+        }
+        .container {
+            display: flex;
+            margin-top: 60px;
+            min-height: calc(100vh - 60px);
+        }
+        .sidebar-left {
+            width: 20%;
+            background-color: white;
+            padding: 20px;
+            border-right: 1px solid #ddd;
+        }
+        .sidebar-left ul {
+            list-style: none;
+        }
+        .sidebar-left ul li {
+            margin-bottom: 15px;
+        }
+        .sidebar-left ul li a {
+            text-decoration: none;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .sidebar-left ul li a:hover {
+            color: #1877f2;
+        }
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            background-color: white;
+            margin: 0 10px;
+        }
+        .post {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+        .post .user {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .post .user img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .post .content {
+            margin-bottom: 10px;
+        }
+        .post .actions {
+            display: flex;
+            justify-content: space-around;
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+        }
+        .post .actions button {
+            background: none;
+            border: none;
+            color: #666;
+            cursor: pointer;
+        }
+        .sidebar-right {
+            width: 25%;
+            background-color: white;
+            padding: 20px;
+            border-left: 1px solid #ddd;
+        }
+        .sidebar-right .friend {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .sidebar-right .friend img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .footer {
+            background-color: #f0f2f5;
+            text-align: center;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+        }
+        /* Responsif */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar-left, .sidebar-right {
+                width: 100%;
+                border: none;
+                border-bottom: 1px solid #ddd;
+            }
+            .header .search {
+                display: none;
+            }
+            .header .nav {
+                gap: 10px;
+            }
+        }
+        @media (max-width: 480px) {
+            .header {
+                padding: 10px;
+            }
+            .header .logo {
+                font-size: 20px;
+            }
+            .header .nav a {
+                padding: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Facebook</div>
+        <div class="search">
+            <input type="text" placeholder="Cari di Facebook">
+        </div>
+        <nav class="nav">
+            <a href="beranda.html">Beranda</a>
+            <a href="teman.html">Teman</a>
+            <a href="pesan.html">Pesan</a>
+            <a href="notifikasi.html">Notifikasi</a>
+        </nav>
+    </header>
+    <div class="container">
+        <aside class="sidebar-left">
+            <ul>
+                <li><a href="profile.html" class="active"><span></span> profile</a></li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <div class="post">
+                <div class="user">
+                    <img src="https://via.placeholder.com/40" alt="User">
+                    <div>
+                        <strong>John Doe</strong><br>
+                        <small>2 jam yang lalu</small>
+                    </div>
+                </div>
+                <div class="content">
+                    <p>Halo teman-teman! Ini adalah postingan pertama saya di Facebook.</p>
+                </div>
+                <div class="actions">
+                    <button>Suka</button>
+                    <button>Komentar</button>
+                    <button>Bagikan</button>
+                </div>
+            </div>
+            <div class="post">
+                <div class="user">
+                    <img src="https://via.placeholder.com/40" alt="User">
+                    <div>
+                        <strong>Jane Smith</strong><br>
+                        <small>5 jam yang lalu</small>
+                    </div>
+                </div>
+                <div class="content">
+                    <p>Menikmati hari yang indah! ☀️</p>
+                    <img src="https://via.placeholder.com/400x200" alt="Post Image" style="width: 100%; border-radius: 8px;">
+                </div>
+                <div class="actions">
+                    <button>Suka</button>
+                    <button>Komentar</button>
+                    <button>Bagikan</button>
+                </div>
+            </div>
+        </main>
+        <aside class="sidebar-right">
+            <h3>Teman</h3>
+            <div class="friend">
+                <img src="https://via.placeholder.com/40" alt="Friend">
+                <div>
+                    <strong>Alice Johnson</strong><br>
+                    <small>Online</small>
+                </div>
+            </div>
+            <div class="friend">
+                <img src="https://via.placeholder.com/40" alt="Friend">
+                <div>
+                    <strong>Bob Wilson</strong><br>
+                    <small>Offline</small>
+                </div>
+            </div>
+            <h3 style="margin-top: 20px;">Iklan</h3>
+            <div style="background: #f0f2f5; padding: 10px; border-radius: 8px;">
+                <p>Promosi produk baru!</p>
+            </div>
+        </aside>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2023 Facebook Clone. Semua hak dilindungi.</p>
+    </footer>
+</body>
+</html>
